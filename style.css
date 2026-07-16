@@ -1,0 +1,202 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+.section-title h2{
+    font-size:3rem;
+    font-weight:750;
+    background:linear-gradient(90deg,#0d6efd,#00c6ff);
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin:5px 0;
+}
+/* Line section */
+.section-title::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    margin:18px auto 0;
+    border-radius:20px;
+    background:#0d6efd;
+}
+
+.section-title p{
+    max-width:600px;
+    margin:auto;
+    height:1.5;
+    font-size:1rem;
+}
+
+/* Navbar */
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: white !important;
+    margin-left: 15px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #0dcaf0 !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #0dcaf0;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Main Content */
+main {
+    padding: 50px 0;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Service Cards */
+.service-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.service-card img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #222;
+}
+
+.card-text {
+    color: #666;
+    font-size: 15px;
+    height: 1.5;
+    margin-bottom: 20px;
+}
+
+.service-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Grooming Button */
+.btn-grooming {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.btn-grooming:hover {
+    background-color: #e6673d;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .service-card img {
+        height: 200px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
